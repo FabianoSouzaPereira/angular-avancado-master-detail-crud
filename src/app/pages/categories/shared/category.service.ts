@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, flatMap } from "rxjs/operators";
 
@@ -42,7 +43,7 @@ export class CategoryService {
 
     return this.http.put(url, category).pipe(
       catchError(this.handleError),
-      map(() => category)
+      map(() => category)  //force return same object category
     )
   }
 

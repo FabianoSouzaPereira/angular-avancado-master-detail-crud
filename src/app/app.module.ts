@@ -9,7 +9,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDatabase } from "./in-memory-database";
 
 import { CategoriesModule } from './pages/categories/categories.module';
-import { CoreModule } from './core/core.module';
 import { EntriesModule } from './pages/entries/entries.module';
 import { ReportsModule } from './pages/reports/reports.module';
 
@@ -18,7 +17,6 @@ import { ReportsModule } from './pages/reports/reports.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    CoreModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
