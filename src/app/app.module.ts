@@ -10,7 +10,7 @@ import { InMemoryDatabase } from "./in-memory-database";
 
 import { CategoriesModule } from './pages/categories/categories.module';
 import { EntriesModule } from './pages/entries/entries.module';
-import { ReportsModule } from './pages/reports/reports.module';
+
 
 //quando for usar uma api externa real, remover     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase), e remover o arquivo in=meory-database.ts
 
@@ -22,8 +22,7 @@ import { ReportsModule } from './pages/reports/reports.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
     CategoriesModule,
-    EntriesModule,
-    ReportsModule,
+    EntriesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
