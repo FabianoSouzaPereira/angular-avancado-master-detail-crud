@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -15,9 +16,10 @@ import { EntriesModule } from './pages/entries/entries.module';
 // quando for usar uma api externa real, remover     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase), e remover o arquivo in=meory-database.ts
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
@@ -25,6 +27,6 @@ import { EntriesModule } from './pages/entries/entries.module';
     EntriesModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [ AppComponent ],
 })
 export class AppModule { }
