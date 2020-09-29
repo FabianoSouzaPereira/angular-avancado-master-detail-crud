@@ -1,7 +1,7 @@
 import { Category } from '../../categories/shared/category.model';
 
 export class Entry {
-  constructor (
+  constructor(
     public id?: number,
     public name?: string,
     public description?: string,
@@ -15,10 +15,10 @@ export class Entry {
 
   static types = {
     expense: 'Despesa',
-    renevue: 'Receita'
+    revenue: 'Receita'
   };
 
-  get paidText (): string {
+  get paidText(): string {
     return this.paid ? 'Pago' : 'Pendente';
   }
 }
